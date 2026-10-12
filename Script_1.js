@@ -18,3 +18,20 @@ document.addEventListener("DOMContentLoaded", function(){
     year.value = savedYear;
   
 });
+
+function name_reset(){
+  localStorage.removeItem("name");
+  entry_name.value="";
+}
+
+function year_reset(){
+  sessionStorage.clear();
+  year.value = null;
+}
+
+
+
+
+
+
+
