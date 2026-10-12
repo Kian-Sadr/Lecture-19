@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19.1</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h1 id="output">Browser Storage</h1>
+
+    <br>
+        <form>
+          <fieldset>
+            <legend>Practice Form</legend>
+            <label for="entry_name">Name:</label>
+            <input type="text" id="entry_name" name="entry_name" maxlength="20">
+            <br>
+            <label for="secret">Secret Key:</label>
+            <input type="password" name="secret" id="secret" size="10" maxlength="10">
+            <br>
+            <label for="year">Year</label>
+            <select id="year" name="year">
+                <option value="freshman">Freshman</option>
+                <option value="soph">Sophomore</option>
+                <option value="jun">Junior</option>
+                <option value="sen">Senior</option>
+            </select>
+            <br>
+            <fieldset>
+            <label for="year2">Year</label>
+            <select id="year2" name="year2" multiple>
+                <option value="freshman">Freshman</option>
+                <option value="soph">Sophomore</option>
+                <option value="jun">Junior</option>
+                <option value="sen">Senior</option>
+            </select>
+            </fieldset>
+            <br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">M</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">F</label><br>
+            <input type="radio" id="undef" name="gender" value="undisclosed">
+            <label for="undef">X</label><br>
+
+            <label for="yes">Yes</label>
+            <input type="radio" id="yes" name="yesno" value="True">
+            <label for="no">No</label>
+            <input type="radio" id="no" name="yesno" value="False">
+
+            <br>
+            <br>
+            <input type="checkbox" id="required" name="required" value="required">
+            <label for="required">This class is required</label><br>
+            <input type="checkbox" id="interest" name="interest" value="interest">
+            <label for="interest">This class' content interests me</label><br>
+            <input type="checkbox" id="website" name="website" value="website">
+            <label for="website"> I have some personal need to create a website and need to learn how</label><br>
+
+            <input type="submit" value="Finished">
+          </fieldset>
+
+          <button onclick="name_reset()">Reset Name</button>
+          <button onclick="year_reset()">Reset Year</button>
+        </form>
+
+    <script src="Script_1.js"></script>
+</body>
+</html>
