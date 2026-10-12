@@ -7,7 +7,8 @@ let url = "wss://echo.websocket.org/";
 let websocket = new WebSocket(url);
 
 websocket.onopen = function(){
-  websocket.send("Hello, Websockets!");
+  displayMessage("connected");
+  websocket.send("Hello, World!");
 };
 
 function displayMessage(message){
@@ -15,3 +16,13 @@ function displayMessage(message){
   output.innerHTML += message;
   output.innerHTML += "</p>";
 };
+
+websocket.onmessage = function(e){
+  displayMessage(e.data);
+};
+
+websocket.onclose = function(){
+  displayMessage("disconnected");
+};
+
+setTimeout(function(){websocket.close();}, 2000);
